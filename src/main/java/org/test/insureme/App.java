@@ -31,11 +31,11 @@ public class App
     WebDriverManager.chromedriver().setup();
     //setting properties
     ChromeOptions chromeOptions = new ChromeOptions();
-    chromeOptions.addArguments("--headless");
+    //chromeOptions.addArguments("--headless");
     // open url
     System.out.println("Driver opening up the url in browser");	
     WebDriver driver = new ChromeDriver(chromeOptions);
-    driver.get("http://18.191.213.1:8081/contact.html");	
+    driver.get("http://localhost:8081/contact.html");	
     
     //invole implicit waits to load the page
     driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -43,11 +43,11 @@ public class App
     System.out.println("Enter details in the form");
     //enter details
     //input name
-    driver.findElement(By.id("inputName")).sendKeys("Sam");
+    driver.findElement(By.id("inputName")).sendKeys("prasanth");
     Thread.sleep(1000);
     driver.findElement(By.id("inputNumber")).sendKeys("999999999");
     Thread.sleep(1000);
-    driver.findElement(By.id("inputMail")).sendKeys("sam@xyz.com");
+    driver.findElement(By.id("inputMail")).sendKeys("pandu.com");
     Thread.sleep(1000);
     driver.findElement(By.id("inputMessage")).sendKeys("Hi, I am interested in insurance");
     Thread.sleep(1000);
